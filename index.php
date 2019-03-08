@@ -111,7 +111,7 @@
           </style>
         </head>
         <body>
-          <div id="map"></div>
+          <div id="map" style="height: 350px; width: auto"></div>
           <div class="poweredByGoogle">
       			<span>Powered by</span>
       			<a href='http://www.google.com' target='_blank'> Google</a>

@@ -199,7 +199,11 @@ require([
 				$btnGMaps.removeAttr("href");
 			}
 		});
-
+        window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: document.body.scrollHeight
+        }, '*');
 	});
 	geoLocate(); // call and cache the user location
 });
