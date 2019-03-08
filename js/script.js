@@ -202,7 +202,7 @@ require([
         window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: document.body.scrollHeight
+            height: $('body').height()
         }, '*');
 	});
 	geoLocate(); // call and cache the user location
