@@ -100,7 +100,7 @@ require([
 				// console.log(result);
 				
 				//show on map
-				map = new google.maps.Map($("#map-canvas", window.parent.document)[0], { zoom : 7 } );
+				map = new google.maps.Map($("#map")[0], { zoom : 7 } );
 				directionsDisplay.setMap(map);
 				directionsDisplay.setDirections(result);
 				//display steps
@@ -164,7 +164,7 @@ require([
 				longitude = parseInt(NWAppData.longitude);
 				if(NWAppData.latitude && NWAppData.longitude) {
 					mapWidget.showMap({
-						"container" : $("#map-canvas", window.parent.document)[0],
+						"container" : $("#map")[0],
 						
 						"latitude" : NWAppData.latitude,
 						"longitude" : NWAppData.longitude,
