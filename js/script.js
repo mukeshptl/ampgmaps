@@ -34,7 +34,7 @@ require([
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: $('body').height(),
+            height: document.body.scrollHeight,
             width: 'auto'
         }, '*');
 	}
@@ -48,7 +48,7 @@ require([
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: $('body').height(),
+            height: document.body.scrollHeight,
             width: 'auto'
         }, '*');
 	}
@@ -58,7 +58,7 @@ require([
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: $('body').height(),
+            height: document.body.scrollHeight,
             width: 'auto'
         }, '*');
 	}
@@ -165,7 +165,7 @@ require([
 				window.parent.postMessage({
                     sentinel: 'amp',
                     type: 'embed-size',
-                    height: $('body').height(),
+                    height: document.body.scrollHeight,
                     width: 'auto'
                 }, '*');
 			});
@@ -202,7 +202,7 @@ require([
 			window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
-                height: $('body').height(),
+                height: document.body.scrollHeight,
                 width: 'auto'
             }, '*');
 		}
@@ -214,7 +214,7 @@ require([
         window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: $('body').height(),
+            height: document.body.scrollHeight,
             width: 'auto'
         }, '*');
 		// ------------------------------------
@@ -236,7 +236,7 @@ require([
 			window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
-                height: $('body').height(),
+                height: document.body.scrollHeight,
                 width: 'auto'
             }, '*');
 		});
@@ -245,7 +245,7 @@ require([
 	window.parent.postMessage({
         sentinel: 'amp',
         type: 'embed-size',
-        height: $('body').height(),
+        height: document.body.scrollHeight,
         width: 'auto'
     }, '*');
 });
