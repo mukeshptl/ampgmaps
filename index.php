@@ -21,54 +21,26 @@
   <body>
     <div id="map"></div>
     <script>
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-            console.log("geolocation present");
-            
-          navigator.geolocation.getCurrentPosition(function(location) {
-            console.log("location:" + location.coords.latitude);
-            return;
-            var pos = {
-              lat: location.coords.latitude,
-              lng: location.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('You are here!');
-            infoWindow.open(map);
-            map.setCenter(pos);
-            map.setZoom(16);
-
-            //Do we have something to geocode?
-            var queryParams = window.location.search.substr(1).split('&').reduce(function (q, query) {
-              var chunks = query.split('=');
-              var key = chunks[0];
-              var value = chunks[1];
-              return (q[key] = value, q);
-            }, {});
-
-
-            if(queryParams.q) {
-              geocoder.geocode( { 'address': queryParams.q}, function(results, status) {
-                if (status == 'OK') {
-                  destination = results[0].geometry.location; 
-                                   
-                  calculateAndDisplayRoute(directionsService, directionsDisplay, position, destination);
-                } else {
-                  console.log('Geocode was not successful for the following reason: ' + status);
-                }
-              });          
-            }
-
-
-          }, function(err) {
-            // handleLocationError(true, infoWindow, map.getCenter());
-            console.warn(`ERROR(${err.code}): ${err.message}`);
-          });
-        }
+      var NWAppData = {
+        listingId : "5892832569065472",
+        brandId : "5282118718455808",
+        brandName : "Michelin",
+        storeType : "",
+        latitude : "21.299494",
+        longitude : "70.237366",
+        city : "Keshod",
+        primaryColor : "#0E56A8",
+        section : "MAP",
+        hoop : "[{&quot;day&quot;=&quot;Monday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Tuesday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Wednesday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Thursday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Friday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Saturday&quot;, &quot;time&quot;=&quot;[8:00am-8:15pm]&quot;}, {&quot;day&quot;=&quot;Sunday&quot;, &quot;time&quot;=&quot;[]&quot;}]",
+        baseUrl : "http://localhost:8888"
+    }
     </script>
-    <script async defer
+    <script src="js/require.js"></script>
+    <script src="js/require-config.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAmZl1v0HeChOciXnl3Il7RTf-lYjgTtSs&sensor=false&libraries=places"></script>
+    <!-- <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmZl1v0HeChOciXnl3Il7RTf-lYjgTtSs">
-    </script>
+    </script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

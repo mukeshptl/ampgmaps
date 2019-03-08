@@ -85,9 +85,7 @@
                 alllow="geolocation"
       >
       
-      <amp-img layout="fill"
-        src="img/placeholder.png"
-        placeholder></amp-img>
+      <amp-img layout="fill" src="img/placeholder.png" placeholder></amp-img>
 
     </amp-iframe>
 
