@@ -31,6 +31,12 @@ require([
 				"&daddr=" + NWAppData.latitude + "," + NWAppData.longitude;
 		// console.log(url);
 		$btnGMaps.attr("href", url);
+		window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: $('body').height(),
+            width: 'auto'
+        }, '*');
 	}
 	function onGeoLocateFailure(err) {
 		
@@ -39,10 +45,22 @@ require([
 		$address.val(address);
 		$address.attr("readonly", "readonly").attr("title", "My Location");
 		$address.parent().find(".edit-address").show();
+		window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: $('body').height(),
+            width: 'auto'
+        }, '*');
 	}
 	function clearAddress(ev) {
 		$address.val("");
 		$address.removeAttr("readonly").focus();
+		window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: $('body').height(),
+            width: 'auto'
+        }, '*');
 	}
 	var autocomplete;
 	$(function() {
@@ -64,7 +82,7 @@ require([
 	
 			$.ajax({
 				method : "post",
-				url : "/site/store/directions",
+				url : "https://localhost:8888/site/store/directions",
 				data : JSON.stringify(obj),
 				contentType : "application/json"
 			})
@@ -144,6 +162,12 @@ require([
 				} catch(ex) {
 					console.log("Unable to read steps");
 				}
+				window.parent.postMessage({
+                    sentinel: 'amp',
+                    type: 'embed-size',
+                    height: $('body').height(),
+                    width: 'auto'
+                }, '*');
 			});
 		});
 		
@@ -175,13 +199,24 @@ require([
 			} catch(ex) {
 				console.log(ex);
 			}
+			window.parent.postMessage({
+                sentinel: 'amp',
+                type: 'embed-size',
+                height: $('body').height(),
+                width: 'auto'
+            }, '*');
 		}
 		// ------------------------------------
 		// Auto populate from-address
 		// ------------------------------------
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
-
+        window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: $('body').height(),
+            width: 'auto'
+        }, '*');
 		// ------------------------------------
 		// Geocode fromAddress and Open Google Maps
 		// ------------------------------------
@@ -198,13 +233,19 @@ require([
 			} else {
 				$btnGMaps.removeAttr("href");
 			}
+			window.parent.postMessage({
+                sentinel: 'amp',
+                type: 'embed-size',
+                height: $('body').height(),
+                width: 'auto'
+            }, '*');
 		});
-        window.parent.postMessage({
-            sentinel: 'amp',
-            type: 'embed-size',
-            height: $('body').height(),
-            width: 'auto'
-        }, '*');
 	});
 	geoLocate(); // call and cache the user location
+	window.parent.postMessage({
+        sentinel: 'amp',
+        type: 'embed-size',
+        height: $('body').height(),
+        width: 'auto'
+    }, '*');
 });
