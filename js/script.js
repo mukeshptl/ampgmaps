@@ -31,6 +31,7 @@ require([
 				"&daddr=" + NWAppData.latitude + "," + NWAppData.longitude;
 		// console.log(url);
 		$btnGMaps.attr("href", url);
+		console.log(document.body.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
@@ -45,6 +46,7 @@ require([
 		$address.val(address);
 		$address.attr("readonly", "readonly").attr("title", "My Location");
 		$address.parent().find(".edit-address").show();
+		console.log(document.body.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
@@ -55,6 +57,7 @@ require([
 	function clearAddress(ev) {
 		$address.val("");
 		$address.removeAttr("readonly").focus();
+		console.log(document.body.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
@@ -162,6 +165,7 @@ require([
 				} catch(ex) {
 					console.log("Unable to read steps");
 				}
+				console.log(document.body.scrollHeight);
 				window.parent.postMessage({
                     sentinel: 'amp',
                     type: 'embed-size',
@@ -189,28 +193,29 @@ require([
 				if(NWAppData.latitude && NWAppData.longitude) {
 					mapWidget.showMap({
 						"container" : $("#map")[0],
-						
 						"latitude" : NWAppData.latitude,
 						"longitude" : NWAppData.longitude,
 						"zoom" : 15
-						
 					});
 				}
+				console.log(document.body.scrollHeight);
+				window.parent.postMessage({
+                    sentinel: 'amp',
+                    type: 'embed-size',
+                    height: document.body.scrollHeight,
+                    width: 'auto'
+                }, '*');
 			} catch(ex) {
 				console.log(ex);
 			}
-			window.parent.postMessage({
-                sentinel: 'amp',
-                type: 'embed-size',
-                height: document.body.scrollHeight,
-                width: 'auto'
-            }, '*');
+			
 		}
 		// ------------------------------------
 		// Auto populate from-address
 		// ------------------------------------
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
+		console.log(document.body.scrollHeight);
         window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
@@ -233,6 +238,7 @@ require([
 			} else {
 				$btnGMaps.removeAttr("href");
 			}
+			console.log(document.body.scrollHeight);
 			window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
@@ -242,6 +248,7 @@ require([
 		});
 	});
 	geoLocate(); // call and cache the user location
+	console.log(document.body.scrollHeight);
 	window.parent.postMessage({
         sentinel: 'amp',
         type: 'embed-size',
