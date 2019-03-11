@@ -182,7 +182,7 @@
       ol.directions {
           padding-left: 25px;
           margin-top: 0;
-          margin-bottom: 10px;
+          margin-bottom: 150px;
       }
       ol.directions > li {
           margin-bottom: 20px;
