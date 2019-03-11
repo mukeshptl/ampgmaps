@@ -77,6 +77,8 @@
       .poweredByGoogle {
           position: relative;
           font-size: 1em;
+          display: block;
+          background: #fff;
       }
       #getdir-form {
           margin-top: 15px;
@@ -97,10 +99,14 @@
           margin-bottom: 5px;
           font-weight: 700;
       }
-      #startingPoint {
+      #startingPoint{
           padding-right: 35px;
-          font-family: "Novecento Wide",Helvetica,Arial,sans-serif;
       }
+      #startingPoint, #endPoint {
+        text-transform: uppercase;
+        font-family: "Novecento Wide",Helvetica,Arial,sans-serif;
+      }
+      
       .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
           cursor: not-allowed;
           background-color: #eee;
