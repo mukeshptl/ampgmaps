@@ -31,11 +31,11 @@ require([
 				"&daddr=" + NWAppData.latitude + "," + NWAppData.longitude;
 		// console.log(url);
 		$btnGMaps.attr("href", url);
-		console.log(document.body.scrollHeight);
+		console.log(document.documentElement.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: document.body.scrollHeight,
+            height: document.documentElement.scrollHeight,
             width: 'auto'
         }, '*');
 	}
@@ -46,22 +46,22 @@ require([
 		$address.val(address);
 		$address.attr("readonly", "readonly").attr("title", "My Location");
 		$address.parent().find(".edit-address").show();
-		console.log(document.body.scrollHeight);
+		console.log(document.documentElement.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: document.body.scrollHeight,
+            height: document.documentElement.scrollHeight,
             width: 'auto'
         }, '*');
 	}
 	function clearAddress(ev) {
 		$address.val("");
 		$address.removeAttr("readonly").focus();
-		console.log(document.body.scrollHeight);
+		console.log(document.documentElement.scrollHeight);
 		window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: document.body.scrollHeight,
+            height: document.documentElement.scrollHeight,
             width: 'auto'
         }, '*');
 	}
@@ -165,11 +165,11 @@ require([
 				} catch(ex) {
 					console.log("Unable to read steps");
 				}
-				console.log(document.body.scrollHeight);
+				console.log(document.documentElement.scrollHeight);
 				window.parent.postMessage({
                     sentinel: 'amp',
                     type: 'embed-size',
-                    height: document.body.scrollHeight,
+                    height: document.documentElement.scrollHeight,
                     width: 'auto'
                 }, '*');
 			});
@@ -198,11 +198,11 @@ require([
 						"zoom" : 15
 					});
 				}
-				console.log(document.body.scrollHeight);
+				console.log(document.documentElement.scrollHeight);
 				window.parent.postMessage({
                     sentinel: 'amp',
                     type: 'embed-size',
-                    height: document.body.scrollHeight,
+                    height: document.documentElement.scrollHeight,
                     width: 'auto'
                 }, '*');
 			} catch(ex) {
@@ -215,11 +215,11 @@ require([
 		// ------------------------------------
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
-		console.log(document.body.scrollHeight);
+		console.log(document.documentElement.scrollHeight);
         window.parent.postMessage({
             sentinel: 'amp',
             type: 'embed-size',
-            height: document.body.scrollHeight,
+            height: document.documentElement.scrollHeight,
             width: 'auto'
         }, '*');
 		// ------------------------------------
@@ -238,21 +238,21 @@ require([
 			} else {
 				$btnGMaps.removeAttr("href");
 			}
-			console.log(document.body.scrollHeight);
+			console.log(document.documentElement.scrollHeight);
 			window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
-                height: document.body.scrollHeight,
+                height: document.documentElement.scrollHeight,
                 width: 'auto'
             }, '*');
 		});
 	});
 	geoLocate(); // call and cache the user location
-	console.log(document.body.scrollHeight);
+	console.log(document.documentElement.scrollHeight);
 	window.parent.postMessage({
         sentinel: 'amp',
         type: 'embed-size',
-        height: document.body.scrollHeight,
+        height: document.documentElement.scrollHeight,
         width: 'auto'
     }, '*');
 });
