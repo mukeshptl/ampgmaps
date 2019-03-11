@@ -77,7 +77,7 @@
           position: relative;
           font-size: .85em;
       }
-      .content .main-col #store-location #getdir-form {
+      #getdir-form {
           margin-top: 15px;
       }
       a {
@@ -160,28 +160,28 @@
           -o-user-select: none;
           user-select: none;
       }
-      .content .main-col #store-location #getdir-timedist {
+      #getdir-timedist {
           border-top: solid 1px #ccc;
           margin-top: 20px;
           padding: 10px;
           display: none;
       }
-      .content .main-col #store-location #getdir-result {
+      #getdir-result {
           padding-top: 10px;
           margin-top: 10px;
       }
-      .content .main-col #store-location ol.directions {
+      ol.directions {
           padding-left: 25px;
           margin-top: 0;
           margin-bottom: 10px;
       }
-      .content .main-col #store-location ol.directions > li {
+      ol.directions > li {
           margin-bottom: 20px;
       }
       b, strong {
           font-weight: 700;
       }
-      .content .main-col #store-location ol.directions > li > div {
+      ol.directions > li > div {
           color: #808080;
           padding: 4px 0;
       }
