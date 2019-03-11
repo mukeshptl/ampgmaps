@@ -6,6 +6,13 @@ require([
 	geoLocate,
 	MapWidget
 ) {
+    console.log(document.documentElement.scrollHeight);
+	window.parent.postMessage({
+        sentinel: 'amp',
+        type: 'embed-size',
+        height: document.documentElement.scrollHeight,
+        width: 'auto'
+    }, '*');
 	var $address;
 	var mapWidget = new MapWidget();
 	var startingPoint;
@@ -221,12 +228,12 @@ require([
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
 		// console.log(document.documentElement.scrollHeight);
-        // window.parent.postMessage({
-        //     sentinel: 'amp',
-        //     type: 'embed-size',
-        //     height: document.documentElement.scrollHeight,
-        //     width: 'auto'
-        // }, '*');
+        window.parent.postMessage({
+            sentinel: 'amp',
+            type: 'embed-size',
+            height: document.documentElement.scrollHeight,
+            width: 'auto'
+        }, '*');
 		// ------------------------------------
 		// Geocode fromAddress and Open Google Maps
 		// ------------------------------------
