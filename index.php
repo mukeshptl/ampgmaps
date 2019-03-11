@@ -176,6 +176,7 @@
       #getdir-result {
           padding-top: 10px;
           margin-top: 10px;
+          margin-bottom: 150px;
       }
       ol.directions {
           padding-left: 25px;
