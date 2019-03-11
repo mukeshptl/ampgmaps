@@ -166,6 +166,9 @@
           display: none;
       }
           </style>
+          <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,800">
+          <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Nunito:400,700">
+          <link rel="stylesheet" type="text/css"  href="https://www.niftywindow.com/clientWeb/css/compiled/window.css">
         </head>
         <body>
           <div id="map" style="height: 350px; width: auto"></div>
