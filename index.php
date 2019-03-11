@@ -202,7 +202,7 @@
       }
       .powered-text {
         tex-align: right;
-        font-size: 0.6em;
+        font-size: 0.8em;
       }
           </style>
           <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,800">
