@@ -200,6 +200,10 @@
           padding: 10px;
           display: none;
       }
+      .powered-text {
+        tex-align: right;
+        font-size: 0.6em;
+      }
           </style>
           <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,800">
           <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Nunito:400,700">
@@ -209,8 +213,10 @@
         <body>
           <div id="map" style="height: 350px; width: auto"></div>
           <div class="poweredByGoogle">
-      			<span>Powered by</span>
-      			<a href='http://www.google.com' target='_blank'> Google</a>
+      			<div class="powered-text">
+      			 <span>Powered by</span>
+      			 <a href='http://www.google.com' target='_blank'> Google</a>
+      			</div>
       			<div id="#getdir-form">
       			  <div class="form-group">
       			    <label for="startingPoint">Get directions</label>
