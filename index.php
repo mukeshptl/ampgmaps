@@ -221,7 +221,7 @@
       			    <input id="endPoint" class="form-control" readonly='readonly' type="text" placeholder="To">
               </div>
               <button id="btnGetDir" class="btn btn-default">Get Directions</button> 
-              <span>span &nbsp;</span>
+              <span>&nbsp;</span>
               <a id="btnGMaps" class="btn btn-default" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
       			</div>
       			<div id="getdir-timedist" class="brand-color-bg theme-brand-bg-text"></div>
