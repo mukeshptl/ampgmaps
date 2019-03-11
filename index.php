@@ -72,6 +72,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        font-size: 16px;
       }
       .poweredByGoogle {
           position: relative;
