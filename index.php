@@ -73,6 +73,7 @@
         margin: 0;
         padding: 0;
         font-size: 16px;
+        background: #fff;
       }
       .poweredByGoogle {
           position: relative;
@@ -176,7 +177,7 @@
       #getdir-result {
           padding-top: 10px;
           margin-top: 10px;
-          margin-bottom: 150px;
+          margin-bottom: 10px;
       }
       ol.directions {
           padding-left: 25px;
