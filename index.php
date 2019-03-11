@@ -76,7 +76,7 @@
       }
       .poweredByGoogle {
           position: relative;
-          font-size: .85em;
+          font-size: 1em;
       }
       #getdir-form {
           margin-top: 15px;
