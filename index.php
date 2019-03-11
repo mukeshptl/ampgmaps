@@ -74,9 +74,7 @@
         padding: 0;
       }
       .poweredByGoogle {
-          position: absolute;
-          margin-top: -15px;
-          right: 25px;
+          position: relative;
           font-size: .85em;
       }
       a {
