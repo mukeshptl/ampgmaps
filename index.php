@@ -201,7 +201,7 @@
           display: none;
       }
       .powered-text {
-        tex-align: right;
+        text-align: right;
         font-size: 0.8em;
       }
           </style>
