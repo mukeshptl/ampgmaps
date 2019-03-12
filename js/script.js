@@ -267,11 +267,11 @@ require([
 		});
 	});
 	geoLocate(); // call and cache the user location
-	// console.log(document.documentElement.scrollHeight);
-	// window.parent.postMessage({
-    //     sentinel: 'amp',
-    //     type: 'embed-size',
-    //     height: document.documentElement.scrollHeight,
-    //     width: 'auto'
-    // }, '*');
+	console.log(document.documentElement.scrollHeight);
+	window.parent.postMessage({
+        sentinel: 'amp',
+        type: 'embed-size',
+        height: document.documentElement.scrollHeight,
+        width: 'auto'
+    }, '*');
 });
