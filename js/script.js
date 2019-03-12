@@ -227,13 +227,13 @@ require([
 		// ------------------------------------
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
-		console.log(document.documentElement.scrollHeight);
-        window.parent.postMessage({
-            sentinel: 'amp',
-            type: 'embed-size',
-            height: document.documentElement.scrollHeight,
-            width: 'auto'
-        }, '*');
+		// console.log(document.documentElement.scrollHeight);
+        // window.parent.postMessage({
+        //     sentinel: 'amp',
+        //     type: 'embed-size',
+        //     height: document.documentElement.scrollHeight,
+        //     width: 'auto'
+        // }, '*');
 		// ------------------------------------
 		// Geocode fromAddress and Open Google Maps
 		// ------------------------------------

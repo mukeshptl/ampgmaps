@@ -3,6 +3,7 @@
   <head>
     <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <meta charset="utf-8">
     <style>
       .brand-color-bg {
