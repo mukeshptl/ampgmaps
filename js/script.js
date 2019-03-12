@@ -153,6 +153,7 @@ require([
 						});
 						$("#getdir-result").empty().append($stepsList);
 						console.log($("#getdir-result").height() + 620);
+						window.parent.document.getElementById('map-canvas').style.height = $("#getdir-result").height() + 620;
 						window.parent.postMessage({
 							sentinel: 'amp',
 							type: 'embed-size',
