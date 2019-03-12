@@ -105,7 +105,7 @@
       }
       #startingPoint, #endPoint {
         text-transform: uppercase;
-        font-family: "Novecento Wide",Helvetica,Arial,sans-serif;
+        font-family: Helvetica,Arial,sans-serif;
       }
       
       .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
@@ -208,7 +208,7 @@
           <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,800">
           <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Nunito:400,700">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-          <link rel="stylesheet" type="text/css"  href="https://www.niftywindow.com/clientWeb/css/compiled/window.css">
+          <link rel="stylesheet" type="text/css"  href="css/window.css">
         </head>
         <body>
           <div id="map" style="height: 350px; width: auto"></div>
