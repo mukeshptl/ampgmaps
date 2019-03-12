@@ -83,6 +83,7 @@ require([
 			});
 		}
 		$("#btnGetDir").on("click", function() {
+			$("#getdir-result").empty();
 			window.parent.postMessage({
 				sentinel: 'amp',
 				type: 'embed-size',
