@@ -152,16 +152,14 @@ require([
 							$stepsList.append($("<li>").html(s.instructions));
 						});
 						$("#getdir-result").empty().append($stepsList);
-						console.log($(".directions").height() + 620);
-						setTimeout(function() {
-							window.parent.postMessage({
-								sentinel: 'amp',
-								type: 'embed-size',
-								// height: document.documentElement.scrollHeight,
-								height: $(".directions").height() + 620,
-								width: 'auto'
-							}, '*');
-						},2500)
+						console.log($("#getdir-result").height() + 620);
+						window.parent.postMessage({
+							sentinel: 'amp',
+							type: 'embed-size',
+							// height: document.documentElement.scrollHeight,
+							height: $("#getdir-result").height() + 620,
+							width: 'auto'
+						}, '*');
 					} else {
 						$("#getdir-result").hide();
 					}
