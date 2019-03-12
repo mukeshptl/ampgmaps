@@ -204,21 +204,21 @@ require([
 						"longitude" : NWAppData.longitude,
 						"zoom" : 15
 					});
-					window.parent.postMessage({
-                        sentinel: 'amp',
-                        type: 'embed-size',
-                        height: document.documentElement.scrollHeight,
-                        width: 'auto'
-                    }, '*');
+					// window.parent.postMessage({
+                    //     sentinel: 'amp',
+                    //     type: 'embed-size',
+                    //     height: document.documentElement.scrollHeight,
+                    //     width: 'auto'
+                    // }, '*');
 				}
 			} catch(ex) {
 				console.log(ex);
-				window.parent.postMessage({
-                    sentinel: 'amp',
-                    type: 'embed-size',
-                    height: document.documentElement.scrollHeight,
-                    width: 'auto'
-                }, '*');
+				// window.parent.postMessage({
+                //     sentinel: 'amp',
+                //     type: 'embed-size',
+                //     height: document.documentElement.scrollHeight,
+                //     width: 'auto'
+                // }, '*');
 			}
 			
 		}
@@ -228,12 +228,12 @@ require([
 		geoLocate().then(onGeoLocateSuccess, onGeoLocateFailure);
 		$(".edit-address").on("click", clearAddress);
 		// console.log(document.documentElement.scrollHeight);
-        window.parent.postMessage({
-            sentinel: 'amp',
-            type: 'embed-size',
-            height: document.documentElement.scrollHeight,
-            width: 'auto'
-        }, '*');
+        // window.parent.postMessage({
+        //     sentinel: 'amp',
+        //     type: 'embed-size',
+        //     height: document.documentElement.scrollHeight,
+        //     width: 'auto'
+        // }, '*');
 		// ------------------------------------
 		// Geocode fromAddress and Open Google Maps
 		// ------------------------------------
@@ -255,23 +255,23 @@ require([
                 }, '*');
 			} else {
 				$btnGMaps.removeAttr("href");
-				window.parent.postMessage({
-                    sentinel: 'amp',
-                    type: 'embed-size',
-                    height: document.documentElement.scrollHeight,
-                    width: 'auto'
-                }, '*');
+				// window.parent.postMessage({
+                //     sentinel: 'amp',
+                //     type: 'embed-size',
+                //     height: document.documentElement.scrollHeight,
+                //     width: 'auto'
+                // }, '*');
 			}
 			console.log(document.documentElement.scrollHeight);
 
 		});
 	});
 	geoLocate(); // call and cache the user location
-	console.log(document.documentElement.scrollHeight);
-	window.parent.postMessage({
-        sentinel: 'amp',
-        type: 'embed-size',
-        height: document.documentElement.scrollHeight,
-        width: 'auto'
-    }, '*');
+	// console.log(document.documentElement.scrollHeight);
+	// window.parent.postMessage({
+    //     sentinel: 'amp',
+    //     type: 'embed-size',
+    //     height: document.documentElement.scrollHeight,
+    //     width: 'auto'
+    // }, '*');
 });
