@@ -7,12 +7,12 @@ require([
 	MapWidget
 ) {
     console.log(document.documentElement.scrollHeight);
-	// window.parent.postMessage({
-    //     sentinel: 'amp',
-    //     type: 'embed-size',
-    //     height: document.documentElement.scrollHeight,
-    //     width: 'auto'
-    // }, '*');
+	window.parent.postMessage({
+        sentinel: 'amp',
+        type: 'embed-size',
+        height: document.documentElement.scrollHeight,
+        width: 'auto'
+    }, '*');
 	var $address;
 	var mapWidget = new MapWidget();
 	var startingPoint;
