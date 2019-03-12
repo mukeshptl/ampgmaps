@@ -166,21 +166,22 @@ require([
 							$stepsList.append($("<li>").html(s.instructions));
 						});
 						$("#getdir-result").empty().append($stepsList);
+						setTimeout(function() {
+							console.log(document.documentElement.scrollHeight);
+							window.parent.postMessage({
+								sentinel: 'amp',
+								type: 'embed-size',
+								// height: document.documentElement.scrollHeight,
+								height: $("#getdir-result").height() + 500,
+								width: 'auto'
+							}, '*');
+						}, 3000);
 					} else {
 						$("#getdir-result").hide();
 					}
 				} catch(ex) {
 					console.log("Unable to read steps");
 				}
-				setTimeout(function() {
-					console.log(document.documentElement.scrollHeight);
-					window.parent.postMessage({
-	                    sentinel: 'amp',
-	                    type: 'embed-size',
-	                    height: document.documentElement.scrollHeight,
-	                    width: 'auto'
-	                }, '*');
-				}, 3000);
 			});
 		});
 		
