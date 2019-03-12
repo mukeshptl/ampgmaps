@@ -172,13 +172,15 @@ require([
 				} catch(ex) {
 					console.log("Unable to read steps");
 				}
-				console.log(document.documentElement.scrollHeight);
-				window.parent.postMessage({
-                    sentinel: 'amp',
-                    type: 'embed-size',
-                    height: document.documentElement.scrollHeight,
-                    width: 'auto'
-                }, '*');
+				setTimeout(function() {
+					console.log(document.documentElement.scrollHeight);
+					window.parent.postMessage({
+	                    sentinel: 'amp',
+	                    type: 'embed-size',
+	                    height: document.documentElement.scrollHeight,
+	                    width: 'auto'
+	                }, '*');
+				}, 3000);
 			});
 		});
 		
