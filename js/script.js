@@ -146,13 +146,15 @@ require([
 						});
 						$("#getdir-result").empty().append($stepsList);
 						console.log(document.documentElement.scrollHeight);
-						window.parent.postMessage({
-							sentinel: 'amp',
-							type: 'embed-size',
-							// height: document.documentElement.scrollHeight,
-							height: $("#getdir-result").height() + 620,
-							width: 'auto'
-						}, '*');
+						setTimeout(function() {
+							window.parent.postMessage({
+								sentinel: 'amp',
+								type: 'embed-size',
+								// height: document.documentElement.scrollHeight,
+								height: $("#getdir-result").height() + 620,
+								width: 'auto'
+							}, '*');
+						},2500)
 					} else {
 						$("#getdir-result").hide();
 					}
