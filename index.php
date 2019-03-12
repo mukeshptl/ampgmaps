@@ -187,6 +187,7 @@
       }
       ol.directions > li {
           margin-bottom: 20px;
+          margin-left: 5px;
       }
       b, strong {
           font-weight: 700;
