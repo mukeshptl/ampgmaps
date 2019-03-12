@@ -145,13 +145,13 @@ require([
 							$stepsList.append($("<li>").html(s.instructions));
 						});
 						$("#getdir-result").empty().append($stepsList);
-						console.log(document.documentElement.scrollHeight);
+						console.log($(".directions").height() + 620);
 						setTimeout(function() {
 							window.parent.postMessage({
 								sentinel: 'amp',
 								type: 'embed-size',
 								// height: document.documentElement.scrollHeight,
-								height: $("#getdir-result").height() + 620,
+								height: $(".directions").height() + 620,
 								width: 'auto'
 							}, '*');
 						},2500)
