@@ -83,7 +83,13 @@ require([
 			});
 		}
 		$("#btnGetDir").on("click", function() {
-			
+			window.parent.postMessage({
+				sentinel: 'amp',
+				type: 'embed-size',
+				// height: document.documentElement.scrollHeight,
+				height: 620,
+				width: 'auto'
+			}, '*');
 			var start = startingPoint || $("#startingPoint").val(),
 				end = $("#endPoint").val(),
 				request = {
