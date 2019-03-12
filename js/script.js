@@ -172,7 +172,7 @@ require([
 								sentinel: 'amp',
 								type: 'embed-size',
 								// height: document.documentElement.scrollHeight,
-								height: $("#getdir-result").height() + 500,
+								height: $("#getdir-result").height() + 620,
 								width: 'auto'
 							}, '*');
 						}, 3000);
