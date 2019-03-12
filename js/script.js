@@ -64,13 +64,13 @@ require([
 	function clearAddress(ev) {
 		$address.val("");
 		$address.removeAttr("readonly").focus();
-		console.log(document.documentElement.scrollHeight);
-		window.parent.postMessage({
-            sentinel: 'amp',
-            type: 'embed-size',
-            height: document.documentElement.scrollHeight,
-            width: 'auto'
-        }, '*');
+		// console.log(document.documentElement.scrollHeight);
+		// window.parent.postMessage({
+        //     sentinel: 'amp',
+        //     type: 'embed-size',
+        //     height: document.documentElement.scrollHeight,
+        //     width: 'auto'
+        // }, '*');
 	}
 	var autocomplete;
 	$(function() {
