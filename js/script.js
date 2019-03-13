@@ -30,7 +30,7 @@ require([
 		pubIsSNM: paramsExtract('pubIsSNM')
 	}
 	function paramsExtract(name) {
-		var url = location.href;
+		var url = window.location.href;
 		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
 		var regexS = "[\\?&]"+name+"=([^&#]*)";
 		var regex = new RegExp( regexS );
@@ -81,7 +81,7 @@ require([
 	}
 	var autocomplete;
 	$(function() {
-		
+		console.log("iFrame URL: " + window.location.href);
 		//google.maps.event.addDomListener(window, 'load', function() {
 		var $input = $address = $("#startingPoint");
 		autocomplete = new google.maps.places.Autocomplete($input[0]);
