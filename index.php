@@ -6,63 +6,7 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <meta charset="utf-8">
     <style>
-      .brand-color-bg {
-       background-color: #DA2A1B !important;
-      }
-      .brand-color-text {
-       color: #DA2A1B !important;
-      }
-      .campaignViewDetail {
-       color: #DA2A1B !important;
-      }
-      .brand-color-border,
-      .theme-border.brand-color-border {
-       border-color: #DA2A1B !important;
-      }
-      a.brand-color {
-       color: #DA2A1B !important;
-      }
-      a.brand-color-hover:hover {
-       color: #DA2A1B !important;
-      }
       
-      .theme-hover-brand-color:hover {
-       color: #DA2A1B !important;
-      }
-      
-      .theme-hover-bg-brand-color:hover {
-       background-color: #DA2A1B !important;
-      }
-      .theme-hover-bg,	
-      .card-hover-bg:hover,
-      .item-wrapper:hover,
-      .header-link-bottom-lst:hover,
-      .item-hover-bg:hover,
-      .article-row:hover {
-       background-color: #ffffd4;
-      }
-      
-      
-      
-      
-      .theme-border, hr {
-       border-color: #c7c7c8 !important;
-      }
-      .theme-content-bg {
-       background-color: #ffffff !important;
-      }
-      .theme-page-bg {
-       background-color: #f2f2f2 !important;
-      }
-      .theme-heading-text {
-       color : #000000 !important;
-      }
-      .theme-brand-bg-text {
-       color : #ffffff !important;
-      }
-      .theme-body-text {
-       color : #444444 !important;
-      }
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
