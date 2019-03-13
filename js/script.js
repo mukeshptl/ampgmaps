@@ -9,34 +9,19 @@ require([
 	var $address;
 	var mapWidget = new MapWidget();
 	var startingPoint;
-	var NWAppData = {
-		listingId : paramsExtract('listingId'),
-		brandId : paramsExtract('brandId'),
-		latitude : paramsExtract('latitude'),
-		longitude : paramsExtract('longitude'),
-		brandColor: paramsExtract('brandColor'),
-		customizations: paramsExtract('customizations'),
-		borderColor: paramsExtract('borderColor'),
-		contentBgColor: paramsExtract('contentBgColor'),
-		pageBgColor: paramsExtract('pageBgColor'),
-		headingTextColor: paramsExtract('headingTextColor'),
-		textOnBrandColor: paramsExtract('textOnBrandColor'),
-		bodyTextColor: paramsExtract('bodyTextColor'),
-		hoverBgColor: paramsExtract('hoverBgColor'),
-		primaryFontName: paramsExtract('primaryFontName'),
-		primaryFontCode: paramsExtract('primaryFontCode'),
-		secondaryFontName: paramsExtract('secondaryFontName'),
-		secondaryFontCode: paramsExtract('secondaryFontCode'),
-		pubIsSNM: paramsExtract('pubIsSNM')
-	}
-	function paramsExtract(name) {
-		var url = window.location.href.replace(/#/g, "%23");
-		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-		var regexS = "[\\?&]"+name+"=([^&#]*)";
-		var regex = new RegExp( regexS );
-		var results = regex.exec( url );
-		return results == null ? null : results[1].replace(/%23/g, '#');
-	}
+	var NWAppData = getParams(window.location.href.replace(/#/g, '%23'));
+	var getParams = function (url) {
+		var params = {};
+		var parser = document.createElement('a');
+		parser.href = url;
+		var query = parser.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split('=');
+			params[pair[0]] = decodeURIComponent(pair[1]);
+		}
+		return params;
+	};
 
 	function onGeoLocateSuccess(params) {
 		var $btnGMaps = $("#btnGMaps");
