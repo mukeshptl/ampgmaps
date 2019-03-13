@@ -30,12 +30,12 @@ require([
 		pubIsSNM: paramsExtract('pubIsSNM')
 	}
 	function paramsExtract(name) {
-		var url = window.location.href;
+		var url = window.location.href.replace(/#/g, "%23");
 		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
 		var regexS = "[\\?&]"+name+"=([^&#]*)";
 		var regex = new RegExp( regexS );
 		var results = regex.exec( url );
-		return results == null ? null : results[1];
+		return results == null ? null : results[1].replace(/%23/g, '#');
 	}
 
 	function onGeoLocateSuccess(params) {
