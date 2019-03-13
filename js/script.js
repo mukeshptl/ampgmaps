@@ -9,7 +9,6 @@ require([
 	var $address;
 	var mapWidget = new MapWidget();
 	var startingPoint;
-	var NWAppData = getParams(window.location.href.replace(/#/g, '%23'));
 	var getParams = function (url) {
 		var params = {};
 		var parser = document.createElement('a');
@@ -22,6 +21,8 @@ require([
 		}
 		return params;
 	};
+	var NWAppData = getParams(window.location.href.replace(/#/g, '%23'));
+	
 
 	function onGeoLocateSuccess(params) {
 		var $btnGMaps = $("#btnGMaps");
