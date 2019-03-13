@@ -13,7 +13,21 @@ require([
 		listingId : paramsExtract('listingId'),
 		brandId : paramsExtract('brandId'),
 		latitude : paramsExtract('latitude'),
-		longitude : paramsExtract('longitude')
+		longitude : paramsExtract('longitude'),
+		brandColor: paramsExtract('brandColor'),
+		customizations: paramsExtract('customizations'),
+		borderColor: paramsExtract('borderColor'),
+		contentBgColor: paramsExtract('contentBgColor'),
+		pageBgColor: paramsExtract('pageBgColor'),
+		headingTextColor: paramsExtract('headingTextColor'),
+		textOnBrandColor: paramsExtract('textOnBrandColor'),
+		bodyTextColor: paramsExtract('bodyTextColor'),
+		hoverBgColor: paramsExtract('hoverBgColor'),
+		primaryFontName: paramsExtract('primaryFontName'),
+		primaryFontCode: paramsExtract('primaryFontCode'),
+		secondaryFontName: paramsExtract('secondaryFontName'),
+		secondaryFontCode: paramsExtract('secondaryFontCode'),
+		pubIsSNM: paramsExtract('pubIsSNM')
 	}
 	function paramsExtract(name) {
 		var url = location.href;
@@ -67,7 +81,7 @@ require([
 	}
 	var autocomplete;
 	$(function() {
-
+		
 		//google.maps.event.addDomListener(window, 'load', function() {
 		var $input = $address = $("#startingPoint");
 		autocomplete = new google.maps.places.Autocomplete($input[0]);
@@ -175,6 +189,46 @@ require([
 							height: $("#getdir-result").height() + 620,
 							width: 'auto'
 						}, '*');
+						if(NWAppData.pubIsSNM === "true") {
+							$('.brand-color-bg').css({'background-color': '#404062 !important'});
+							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover, .theme-hover-bg-brand-color:hover').css({'color': '#404062 !important'});
+							$('.brand-color-border, .theme-border.brand-color-border').css({'border-color': '#404062 !important'});
+							$('.theme-hover-bg, .card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css({'background-color': '#ffffd4'});
+							$('.theme-border, hr').css({'border-color': '#c7c7c8 !important'});
+							$('.theme-content-bg, .theme-page-bg').css({'background-color': '#ffffff !important'});
+							$('.theme-heading-text').css({'color' : '#000000 !important'});
+							$('.theme-brand-bg-text').css({'color': '#ffffff !important'});
+							$('.theme-body-text').css({'color': '#444444 !important'});
+							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css({'background-color': '#ffffd4 !important'});
+							$('html, body').css({'font-family': '"Open Sans", Helvetica, Arial, sans-serif, sans'});
+							$('.menu-bar ul.nav-menu, .nap-inner h1').css({'font-family': 'Nunito, "Times New Roman", serif'});
+						} else {
+							$('.brand-color-bg').css({'background-color': NWAppData.brandColor + ' !important'});
+							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover::hover, .theme-hover-brand-color::hover').css({'color': NWAppData.brandColor});
+							$('.brand-color-border, .theme-border.brand-color-border').css({'border-color': NWAppData.brandColor + ' !important'});
+							$('.brand-color-bg, .theme-hover-bg-brand-color:hover').css({'background-color': NWAppData.brandColor + ' !important'});
+							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css({'color': NWAppData.brandColor + ' !important'});
+							$('.brand-color-border, .theme-border.brand-color-border').css({'border-color': NWAppData.brandColor + ' !important'});
+							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css({'background-color': '#ffffd4'});
+							$('.theme-border, hr').css({'border-color': NWAppData.borderColor +' !important'});
+							$('.theme-content-bg ').css({'background-color': NWAppData.contentBgColor + '!important'});
+							$('.theme-page-bg').css({'background-color': NWAppData.pageBgColor + ' !important'});
+							$('.theme-heading-text').css({'color': NWAppData.headingTextColor + ' !important'});
+							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.replace(/ /g, '').length >0)
+								$('.theme-brand-bg-text').css({'color': NWAppData.textOnBrandColor + ' !important'});
+							else
+								$('.theme-brand-bg-text').css({'color': '#fff !important'});
+							$('.theme-body-text').css({'color': NWAppData.bodyTextColor + ' !important'});
+							if(NWAppData.hoverBgColor && NWAppData.hoverBgColor.replace(/ /g, '').length >0) {
+								$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css({'background-color': NWAppData.hoverBgColor + '!important'});
+							}
+							if(NWAppData.primaryFontName && NWAppData.primaryFontName.replace(/ /g, '').length >0) {
+								$('html, body').css({'font-family ': NWAppData.primaryFontName + ', "Open Sans", Arial, sans-serif, sans'});
+							}
+							if(NWAppData.secondaryFontName && NWAppData.secondaryFontName.replace(/ /g, '').length >0) {
+								$('.menu-bar ul.nav-menu, .nap-inner h1 ').css({'font-family ': NWAppData.secondaryFontName + ', Nunito, "Times New Roman", serif'});
+							}
+						}
 					} else {
 						$("#getdir-result").hide();
 					}
