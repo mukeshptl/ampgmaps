@@ -176,35 +176,35 @@ require([
 							width: 'auto'
 						}, '*');
 						if(NWAppData.pubIsSNM === "true") {
-							$('.brand-color-bg').css('background-color', '#404062 !important');
-							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover, .theme-hover-bg-brand-color:hover').css('color', '#404062 !important');
-							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', '#404062 !important');
+							$('.brand-color-bg').css('background-color', '#404062');
+							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover, .theme-hover-bg-brand-color:hover').css('color', '#404062');
+							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', '#404062');
 							$('.theme-hover-bg, .card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4');
-							$('.theme-border, hr').css('border-color', '#c7c7c8 !important');
-							$('.theme-content-bg, .theme-page-bg').css('background-color', '#ffffff !important');
-							$('.theme-heading-text').css('color' , '#000000 !important');
-							$('.theme-brand-bg-text').css('color', '#ffffff !important');
-							$('.theme-body-text').css('color', '#444444 !important');
-							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4 !important');
+							$('.theme-border, hr').css('border-color', '#c7c7c8');
+							$('.theme-content-bg, .theme-page-bg').css('background-color', '#ffffff');
+							$('.theme-heading-text').css('color' , '#000000');
+							$('.theme-brand-bg-text').css('color', '#ffffff');
+							$('.theme-body-text').css('color', '#444444');
+							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4');
 							$('html, body').css('font-family', '"Open Sans", Helvetica, Arial, sans-serif, sans');
 							$('.menu-bar ul.nav-menu, .nap-inner h1').css('font-family', 'Nunito, "Times New Roman", serif');
 						} else {
-							$('.brand-color-bg').css('background-color', NWAppData.brandColor + ' !important');
+							$('.brand-color-bg').css('background-color', NWAppData.brandColor);
 							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover::hover, .theme-hover-brand-color::hover').css('color', NWAppData.brandColor);
-							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor + ' !important');
-							$('.brand-color-bg, .theme-hover-bg-brand-color,hover').css('background-color', NWAppData.brandColor + ' !important');
-							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor + ' !important');
-							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor + ' !important');
+							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
+							$('.brand-color-bg, .theme-hover-bg-brand-color,hover').css('background-color', NWAppData.brandColor);
+							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor);
+							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
 							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4');
-							$('.theme-border, hr').css('border-color', NWAppData.borderColor +' !important');
+							$('.theme-border, hr').css('border-color', NWAppData.borderColor +'');
 							$('.theme-content-bg ').css('background-color', NWAppData.contentBgColor + '!important');
-							$('.theme-page-bg').css('background-color', NWAppData.pageBgColor + ' !important');
-							$('.theme-heading-text').css('color', NWAppData.headingTextColor + ' !important');
+							$('.theme-page-bg').css('background-color', NWAppData.pageBgColor);
+							$('.theme-heading-text').css('color', NWAppData.headingTextColor);
 							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.replace(/ /g, '').length >0)
-								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor + ' !important');
+								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor);
 							else
-								$('.theme-brand-bg-text').css('color', '#fff !important');
-							$('.theme-body-text').css('color', NWAppData.bodyTextColor + ' !important');
+								$('.theme-brand-bg-text').css('color', '#fff');
+							$('.theme-body-text').css('color', NWAppData.bodyTextColor);
 							if(NWAppData.hoverBgColor && NWAppData.hoverBgColor.replace(/ /g, '').length >0) {
 								$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', NWAppData.hoverBgColor + '!important');
 							}
