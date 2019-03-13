@@ -197,21 +197,21 @@ require([
 							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
 							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4');
 							$('.theme-border, hr').css('border-color', NWAppData.borderColor +'');
-							$('.theme-content-bg ').css('background-color', NWAppData.contentBgColor + '!important');
+							$('.theme-content-bg ').css('background-color', NWAppData.contentBgColor);
 							$('.theme-page-bg').css('background-color', NWAppData.pageBgColor);
 							$('.theme-heading-text').css('color', NWAppData.headingTextColor);
-							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.replace(/ /g, '').length >0)
+							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.length > 0)
 								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor);
 							else
 								$('.theme-brand-bg-text').css('color', '#fff');
 							$('.theme-body-text').css('color', NWAppData.bodyTextColor);
-							if(NWAppData.hoverBgColor && NWAppData.hoverBgColor.replace(/ /g, '').length >0) {
-								$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', NWAppData.hoverBgColor + '!important');
+							if(NWAppData.hoverBgColor && NWAppData.hoverBgColor.length > 0) {
+								$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', NWAppData.hoverBgColor);
 							}
-							if(NWAppData.primaryFontName && NWAppData.primaryFontName.replace(/ /g, '').length >0) {
+							if(NWAppData.primaryFontName && NWAppData.primaryFontName.length > 0) {
 								$('html, body').css('font-family ', NWAppData.primaryFontName + ', "Open Sans", Arial, sans-serif, sans');
 							}
-							if(NWAppData.secondaryFontName && NWAppData.secondaryFontName.replace(/ /g, '').length >0) {
+							if(NWAppData.secondaryFontName && NWAppData.secondaryFontName.length > 0) {
 								$('.menu-bar ul.nav-menu, .nap-inner h1 ').css('font-family ', NWAppData.secondaryFontName + ', Nunito, "Times New Roman", serif');
 							}
 						}
