@@ -10,10 +10,10 @@ require([
 	var mapWidget = new MapWidget();
 	var startingPoint;
 	var NWAppData = {
-		listingId : paramsExtract(listingId),
-		brandId : paramsExtract(brandId),
-		latitude : paramsExtract(latitude),
-		longitude : paramsExtract(longitude)
+		listingId : paramsExtract('listingId'),
+		brandId : paramsExtract('brandId'),
+		latitude : paramsExtract('latitude'),
+		longitude : paramsExtract('longitude')
 	}
 	function paramsExtract(name) {
 		var url = location.href;
