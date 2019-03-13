@@ -22,7 +22,7 @@ require([
 		return params;
 	};
 	var NWAppData = getParams(window.location.href.replace(/#/g, '%23'));
-	
+	console.log(NWAppData);
 
 	function onGeoLocateSuccess(params) {
 		var $btnGMaps = $("#btnGMaps");
