@@ -67,7 +67,7 @@ require([
 	}
 	var autocomplete;
 	$(function() {
-		console.log("iFrame URL: " + window.location.href);
+		// console.log("iFrame URL: " + window.location.href);
 		//google.maps.event.addDomListener(window, 'load', function() {
 		var $input = $address = $("#startingPoint");
 		autocomplete = new google.maps.places.Autocomplete($input[0]);
@@ -191,9 +191,10 @@ require([
 						} else {
 							console.log("Not SNM");
 							$('.brand-color-bg').css('background-color', NWAppData.brandColor);
-							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover::hover, .theme-hover-brand-color::hover').css('color', NWAppData.brandColor);
+							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor);
+							// a.brand-color-hover:hover, .theme-hover-brand-color:hover
 							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
-							$('.brand-color-bg, .theme-hover-bg-brand-color,hover').css('background-color', NWAppData.brandColor);
+							$('.brand-color-bg, .theme-hover-bg-brand-color:hover').css('background-color', NWAppData.brandColor);
 							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor);
 							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
 							$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', '#ffffd4');
