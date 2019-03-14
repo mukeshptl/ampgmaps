@@ -1,5 +1,5 @@
 require.config({
- baseUrl : "/js",
+ baseUrl : "/clientWeb/amp/map-iframe/js",
  paths : {
   "underscore" : "underscore",
   "jquery" : "jquery",
