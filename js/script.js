@@ -67,6 +67,7 @@ require([
 	}
 	var autocomplete;
 	$(function() {
+		$('#endPoint').val(NWAppData.address);
 		// console.log("iFrame URL: " + window.location.href);
 		//google.maps.event.addDomListener(window, 'load', function() {
 		var $input = $address = $("#startingPoint");
