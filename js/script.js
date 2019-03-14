@@ -22,7 +22,7 @@ require([
 		return params;
 	};
 	var NWAppData = getParams(window.location.href.replace(/#/g, '%23'));
-	console.log(NWAppData);
+	// console.log(NWAppData);
 
 	function onGeoLocateSuccess(params) {
 		var $btnGMaps = $("#btnGMaps");
@@ -103,7 +103,7 @@ require([
 			obj.brandId = NWAppData.brandId;
 			var parentUrl = "niftywindow.com";
 			parentUrl = (window.location != window.parent.location)? document.referrer: document.location.href;
-			console.log("parentUrl: " + extractHostname(parentUrl));
+			// console.log("parentUrl: " + extractHostname(parentUrl));
 			$.ajax({
 				method : "post",
 				url : "https://" + extractHostname(parentUrl) + "/site/store/directions",
@@ -187,7 +187,7 @@ require([
 							$stepsList.append($("<li>").html(s.instructions));
 						});
 						$("#getdir-result").empty().append($stepsList);
-						console.log($("#getdir-result").height() + 620);
+						// console.log($("#getdir-result").height() + 620);
 						// window.parent.document.$('#map-canvas').height($("#getdir-result").height() + 620);
 						window.parent.postMessage({
 							sentinel: 'amp',
@@ -210,10 +210,8 @@ require([
 							$('html, body').css('font-family', '"Open Sans", Helvetica, Arial, sans-serif, sans');
 							$('.menu-bar ul.nav-menu, .nap-inner h1').css('font-family', 'Nunito, "Times New Roman", serif');
 						} else {
-							console.log("Not SNM");
 							$('.brand-color-bg').css('background-color', NWAppData.brandColor);
 							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor);
-							// a.brand-color-hover:hover, .theme-hover-brand-color:hover
 							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
 							$('.brand-color-bg, .theme-hover-bg-brand-color:hover').css('background-color', NWAppData.brandColor);
 							$('.brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover:hover, .theme-hover-brand-color:hover').css('color', NWAppData.brandColor);
@@ -225,8 +223,6 @@ require([
 							$('.theme-heading-text').css('color', NWAppData.headingTextColor);
 							if(NWAppData.hasOwnProperty('textOnBrandColor') && NWAppData.textOnBrandColor != "" && NWAppData.textOnBrandColor.length > 0) {
 								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor + '');
-								console.log($('.theme-brand-bg-text'));
-								console.log(NWAppData.textOnBrandColor);
 							} else {
 								$('.theme-brand-bg-text').css('color', '#fff');
 							}
