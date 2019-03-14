@@ -65,6 +65,24 @@ require([
         //     width: 'auto'
         // }, '*');
 	}
+	function extractHostname(url) {
+		var hostname;
+		//find & remove protocol (http, ftp, etc.) and get hostname
+	
+		if (url.indexOf("//") > -1) {
+			hostname = url.split('/')[2];
+		}
+		else {
+			hostname = url.split('/')[0];
+		}
+	
+		//find & remove port number
+		hostname = hostname.split(':')[0];
+		//find & remove "?"
+		hostname = hostname.split('?')[0];
+	
+		return hostname;
+	}
 	var autocomplete;
 	$(function() {
 		$('#endPoint').val(NWAppData.address);
@@ -83,11 +101,12 @@ require([
 				return;
 			obj.listingId = NWAppData.listingId;
 			obj.brandId = NWAppData.brandId;
-			var parentUrl = (window.location != window.parent.location)? document.referrer: document.location.href;
-			console.log("parentUrl: " + parentUrl);
+			var parentUrl = "niftywindow.com";
+			parentUrl = (window.location != window.parent.location)? document.referrer: document.location.href;
+			console.log("parentUrl: " + extractHostname(parentUrl));
 			$.ajax({
 				method : "post",
-				url : "/site/store/directions",
+				url : "https://" + extractHostname(parentUrl) + "/site/store/directions",
 				data : JSON.stringify(obj),
 				contentType : "application/json"
 			})
