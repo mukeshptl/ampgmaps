@@ -201,10 +201,14 @@ require([
 							$('.theme-content-bg ').css('background-color', NWAppData.contentBgColor);
 							$('.theme-page-bg').css('background-color', NWAppData.pageBgColor);
 							$('.theme-heading-text').css('color', NWAppData.headingTextColor);
-							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.length > 0)
+							if(NWAppData.textOnBrandColor && NWAppData.textOnBrandColor.length > 0) {
 								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor);
-							else
+								console.log($('.theme-brand-bg-text'));
+								console.log(NWAppData.textOnBrandColor);
+							} else {
 								$('.theme-brand-bg-text').css('color', '#fff');
+							}
+								
 							$('.theme-body-text').css('color', NWAppData.bodyTextColor);
 							if(NWAppData.hoverBgColor && NWAppData.hoverBgColor.length > 0) {
 								$('.theme-hover-bg,	.card-hover-bg:hover, .item-wrapper:hover, .header-link-bottom-lst:hover, .item-hover-bg:hover, .article-row:hover').css('background-color', NWAppData.hoverBgColor);
