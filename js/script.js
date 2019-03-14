@@ -83,10 +83,11 @@ require([
 				return;
 			obj.listingId = NWAppData.listingId;
 			obj.brandId = NWAppData.brandId;
-	
+			var parentUrl = (window.location != window.parent.location)? document.referrer: document.location.href;
+			console.log("parentUrl: " + parentUrl);
 			$.ajax({
 				method : "post",
-				url : "https://localhost:8888/site/store/directions",
+				url : "/site/store/directions",
 				data : JSON.stringify(obj),
 				contentType : "application/json"
 			})
