@@ -202,7 +202,7 @@ require([
 							$('.theme-page-bg').css('background-color', NWAppData.pageBgColor);
 							$('.theme-heading-text').css('color', NWAppData.headingTextColor);
 							if(NWAppData.hasOwnProperty('textOnBrandColor') && NWAppData.textOnBrandColor != "" && NWAppData.textOnBrandColor.length > 0) {
-								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor);
+								$('.theme-brand-bg-text').css('color', NWAppData.textOnBrandColor + '');
 								console.log($('.theme-brand-bg-text'));
 								console.log(NWAppData.textOnBrandColor);
 							} else {
