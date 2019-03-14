@@ -189,6 +189,7 @@ require([
 							$('html, body').css('font-family', '"Open Sans", Helvetica, Arial, sans-serif, sans');
 							$('.menu-bar ul.nav-menu, .nap-inner h1').css('font-family', 'Nunito, "Times New Roman", serif');
 						} else {
+							console.log("Not SNM");
 							$('.brand-color-bg').css('background-color', NWAppData.brandColor);
 							$('.brand-color-text, .theme-content-bg h1.brand-color-text, .page .brand-color-text, .campaignViewDetail, a.brand-color, a.brand-color-hover::hover, .theme-hover-brand-color::hover').css('color', NWAppData.brandColor);
 							$('.brand-color-border, .theme-border.brand-color-border').css('border-color', NWAppData.brandColor);
