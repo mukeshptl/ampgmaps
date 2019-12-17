@@ -180,10 +180,10 @@
       			    <input id="endPoint" class="form-control" readonly='readonly' type="text" placeholder="To">
               </div>
               <button id="btnGetDir" class="btn btn-default full-width-btn">Get Directions</button> 
-              <span>&nbsp;</span>
               <a id="btnGMaps" class="btn btn-default full-width-btn" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
               <a id="whatsapp-button" class="whatsapp-button mobile-only btn btn-default full-width-btn" href="" target="_blank", style="display:none">
-					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important;"> Send</i>
+					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important;"></i>
+					      Send
 					    </a>
       			</div>
       			<div id="getdir-timedist" class="brand-color-bg theme-brand-bg-text"></div>
