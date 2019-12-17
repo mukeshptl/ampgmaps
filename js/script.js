@@ -83,13 +83,24 @@ require([
 	
 		return hostname;
 	}
+	
 	function showWhatsapp(whatsappNumber, locality, landmark, city, storeName) {
 		var number = whatsappNumber;
 		var href = 'https://wa.me/';
-		href += whatsappNumber + '?text=Share directions to '+ storeName + ', ' + locality + (landmark && landmark.length && landmark !== '') ? ' - ' + landmark : '' + ', ' + city;
+		href = href + whatsappNumber;
+		href = href + '?text=Share directions to ';
+		href = href + storeName + ', ';
+		href = href + locality;
+		if(landmark && landmark.length > 0 && landmark != '') {
+			href = href + ' - ' + landmark;
+		}
+		href = href + ', ' + city;
+		// href = href + (landmark && landmark.length && landmark !== '') ? ' - ' + landmark : '' + 
+		// ', ' + city;
 		console.log(href);
 		$('#whatsapp-button').attr('href', href).show();
 	}
+	
 	var autocomplete;
 	$(function() {
 		$('#endPoint').val(NWAppData.address);
@@ -98,8 +109,8 @@ require([
 		
 		
 		// whatsapp button logic
-		if(NWAppData.brandWhatsapp === 'true') 	
-			console.log();
+		// if(NWAppData.brandWhatsapp === 'true') 	
+		// 	console.log("");
 		if(NWAppData.hasOwnProperty('brandWhatsapp') && NWAppData.brandWhatsapp === 'true') {
 			showWhatsapp(NWAppData.whatsappNumber, NWAppData.locality, NWAppData.landmark, NWAppData.city, NWAppData.storeName);
 		}
