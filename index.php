@@ -30,7 +30,7 @@
       #getdir-form {
           margin-top: 15px;
       }
-      #getdir-form .full-width-button.btn.btn-default {
+      #getdir-form .full-width-btn.btn.btn-default {
         width: 100%;
         margin-bottom: 10px;
       }
