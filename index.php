@@ -181,7 +181,7 @@
               </div>
               <button id="btnGetDir" class="btn btn-default full-width-btn">Get Directions</button> 
               <a id="btnGMaps" class="btn btn-default full-width-btn" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
-              <a id="whatsapp-button" class="whatsapp-button mobile-only btn btn-default full-width-btn" href="" target="_blank", style="display:none">
+              <a id="whatsapp-button" class="whatsapp-button btn btn-default full-width-btn" href="" target="_blank", style="display:none">
 					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important;"></i>
 					      Send
 					    </a>
