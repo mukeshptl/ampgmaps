@@ -83,11 +83,28 @@ require([
 	
 		return hostname;
 	}
+	function showWhatsapp(whatsappNumber, locality, landmark, city, storeName) {
+		var number = whatsappNumber;
+		var href = 'https://wa.me/';
+		href += whatsappNumber + '?text=Share directions to '+ storeName + ', ' + locality + (landmark && landmark.length && landmark !== '') ? ' - ' + landmark : '' + ', ' + city;
+		
+		$('#whatsapp-button').attr('href', href).show();
+	}
 	var autocomplete;
 	$(function() {
 		$('#endPoint').val(NWAppData.address);
 		// console.log("iFrame URL: " + window.location.href);
 		//google.maps.event.addDomListener(window, 'load', function() {
+		
+		
+		// whatsapp button logic
+		
+		if(NWAppData.hasOwnProperty('brandWhatsapp') && NWAppData.brandWhatsapp === 'true') {
+			showWhatsapp(NWAppData.whatsappNumber, NWAppData.locality, NWAppData.landmark, NWAppData.city, NWAppData.storeName);
+		}
+		
+		// whatsapp button logic
+		
 		var $input = $address = $("#startingPoint");
 		autocomplete = new google.maps.places.Autocomplete($input[0]);
 		//});
