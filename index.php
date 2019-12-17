@@ -215,6 +215,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-
-
-latitude=12.975308&longitude=77.6536&listingId=6711625134374912&brandId=5278843940110336&brandColor=D82125&borderColor=#c7c7c8&contentBgColor=#ffffff&pageBgColor=#f2f2f2&headingTextColor=#000000&textOnBrandColor=#ffffff&bodyTextColor=#D82125&hoverBgColor=&primaryFontName=&primaryFontCode=&secondaryFontName=&secondaryFontCode=&pubIsSNM=false&address=4, Jeevan Bheema Nagar Road, Bangalore - 560075, Karnataka.&brandWhatsapp=true&whatsappNumber=916366503333
