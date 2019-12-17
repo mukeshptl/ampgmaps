@@ -87,7 +87,7 @@ require([
 		var number = whatsappNumber;
 		var href = 'https://wa.me/';
 		href += whatsappNumber + '?text=Share directions to '+ storeName + ', ' + locality + (landmark && landmark.length && landmark !== '') ? ' - ' + landmark : '' + ', ' + city;
-		
+		console.log(href);
 		$('#whatsapp-button').attr('href', href).show();
 	}
 	var autocomplete;
