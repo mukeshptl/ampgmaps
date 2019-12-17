@@ -178,6 +178,9 @@
               <button id="btnGetDir" class="btn btn-default">Get Directions</button> 
               <span>&nbsp;</span>
               <a id="btnGMaps" class="btn btn-default" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
+              <a id="whatsapp-button" class="whatsapp-button mobile-only btn btn-default" href="" target="_blank", style="display:none">
+					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important; margin-right: 5px;"></i>
+					    </a>
       			</div>
       			<div id="getdir-timedist" class="brand-color-bg theme-brand-bg-text"></div>
       			<div id="getdir-result">
