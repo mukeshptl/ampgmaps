@@ -30,6 +30,10 @@
       #getdir-form {
           margin-top: 15px;
       }
+      #getdir-form .full-width-button.btn.btn-default {
+        width: 100%;
+        margin-bottom: 10px;
+      }
       a {
         text-decoration: none;
         color: #606060;
@@ -164,7 +168,7 @@
       			 <span>Powered by</span>
       			 <a href='http://www.google.com' target='_blank'> Google</a>
       			</div>
-      			<div id="#getdir-form">
+      			<div id="getdir-form">
       			  <div class="form-group">
       			    <label for="startingPoint">Get directions</label>
       			    <input id="startingPoint" class="form-control ph-font" type="text" placeholder="From">
@@ -175,11 +179,11 @@
       			  <div class="form-group">
       			    <input id="endPoint" class="form-control" readonly='readonly' type="text" placeholder="To">
               </div>
-              <button id="btnGetDir" class="btn btn-default">Get Directions</button> 
+              <button id="btnGetDir" class="btn btn-default full-width-btn">Get Directions</button> 
               <span>&nbsp;</span>
-              <a id="btnGMaps" class="btn btn-default" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
-              <a id="whatsapp-button" class="whatsapp-button mobile-only btn btn-default" href="" target="_blank", style="display:none">
-					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important; margin-right: 5px;"></i>
+              <a id="btnGMaps" class="btn btn-default full-width-btn" data-href="http://maps.google.com/maps" target="_blank">View on Google Maps</a>
+              <a id="whatsapp-button" class="whatsapp-button mobile-only btn btn-default full-width-btn" href="" target="_blank", style="display:none">
+					      <i class="fa fa-whatsapp" style="font-size: 1.2em !important;"> Send</i>
 					    </a>
       			</div>
       			<div id="getdir-timedist" class="brand-color-bg theme-brand-bg-text"></div>
