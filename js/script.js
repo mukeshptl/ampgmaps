@@ -98,7 +98,8 @@ require([
 		
 		
 		// whatsapp button logic
-		console.log(NWAppData.brandWhatsapp);
+		if(NWAppData.brandWhatsapp === 'true') 	
+			console.log();
 		if(NWAppData.hasOwnProperty('brandWhatsapp') && NWAppData.brandWhatsapp === 'true') {
 			showWhatsapp(NWAppData.whatsappNumber, NWAppData.locality, NWAppData.landmark, NWAppData.city, NWAppData.storeName);
 		}
